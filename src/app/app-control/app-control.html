@@ -1,0 +1,18 @@
+<label class="label_container">
+     <span class="label__text label" >{{options?.label}}</span>
+     <span class="label">:</span>
+    </label>
+<input #input type="options?.type" 
+[required]="options?.required"
+[disabled]="disabled"
+[min]="options?.minlength"
+[placeholder]="options?.placeholder"
+(input)="onValueChange($event)"  
+(change)="onValueChange($event)"
+(blur)="onTouched()"
+class="form-control"
+[ngClass]="{'has-error': showError}" />
+<div class="validation-message" *ngIf="showError">
+  {{errors[0]}}
+</div>
+

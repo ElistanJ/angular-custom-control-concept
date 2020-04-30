@@ -1,0 +1,6 @@
+<form [formGroup]="formGroup" class="form" (submit)=onSubmit()>
+  <div><app-control formControlName="name" [options]="options.name"></app-control></div>
+  <div><app-control formControlName="email" [options]="options.email"></app-control></div>
+  <div><button type="submit">Submit</button></div>
+  <div>Form is {{formGroup.status.toLowerCase()}}</div>
+</form>
